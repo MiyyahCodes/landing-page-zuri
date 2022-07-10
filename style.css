@@ -1,142 +1,235 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:600&display=swap');
-* {
-	box-sizing: border-box;
+:root{
+	--grayishblue: hsl(208, 11%, 55%);
+    --white: hsl(0, 100%, 100%);
+    --shadow: .5px .5px 3px 2px hsla(192, 100%, 9%,.1);
+    --pink: hsl(322, 100%, 66%);
+    --verypalecyan: hsl(193, 100%, 96%);
+    --verydarkcyan: hsl(192, 100%, 9%);
 }
-body {
-	color: hsl(192, 100%, 9%);
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.15em;
-	margin: 0;
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    line-height: 30px;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
 }
-h1,
-h2 {
-	font-family: 'Poppins', sans-serif;
+h1{
+    font-size: 2rem;
+    line-height: 40px;
 }
-p {
-	opacity: 0.6;
+h2{
+    font-size: 1.7rem;
+    line-height: 40px;
 }
-img {
-	max-width: 100%;
+h3{
+    font-size: 1.5rem;
+    line-height: 40px;
 }
-.btn {
-	border-radius: 50px;
-	background-color: #fff;
-	border: none;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-	cursor: pointer;
-	font-size: 16px;
-	font-weight: 700;
-	padding: 15px 60px;
+p{
+    margin: 20px 0px;
 }
-.btn-primary {
-	background-color: hsl(322, 100%, 66%);
-	color: #fff;
+header{
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./images/bg-hero-desktop.svg);
 }
-.container {
-	padding: 0 20px;
-	margin: 0 auto;
-	max-width: 100%;
-	width: 1000px;
+header>div, main>div, footer>div{
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0 20px 0;
 }
-.center {
-	text-align: center;
+nav{
+    display: flex;
+    justify-content: space-between;
 }
-.flex {
-	display: flex;
-	align-items: center;
+.nav-button{
+    width: 100%;
+    padding: 10px 60px;
+    background-color: var(--white);
+    color: hsl(0, 100%, 0%);
+    font-weight: bolder;
+    border-radius: 25px;
+    border: none;
+    box-shadow: var(--shadow);
+    font-size: 14px;
 }
-.flex > div,
-.flex > ul {
-	flex: 1;
+.nav-button:active{
+    color:var(--grayishblue)
 }
-.align-start {
-	align-items: flex-start;
+.flex{
+    display: flex;
+    width: 100%;
+    margin: 40px auto 0 auto;
 }
-header {	background-image: url('./images/bg-hero-desktop.svg');
-	background-size: cover;
-	background-position: center center;
-	background-color: hsl(193, 100%, 96%);
-	padding: 40px 0;
+.flex-animation{
+    transition: all .1s linear;}
+.flex-animation:hover{
+    transform: translateY(5px);
 }
-nav {
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 40px;
+main .flex{
+    margin-top:100px;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
 }
-.header-img {
-	margin-left: 20%;
-	width: 80%;
+.build{
+    width: 50%;
+    margin: auto;
+    padding-right: 100px;
 }
-.box {
-	background-color: #fff;
-	border-radius: 15px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-	margin: 40px 0;
-	padding: 60px;
+.flex-2{
+    width: 50%;
+    margin: auto;
+    padding-left: 100px;
 }
-.small-box {
-	display: inline-block;
-	position: relative;
-	margin-bottom: -50%;
-	z-index: 1;
+.flex-1{
+    width: 50%
 }
-.box img {
-	width: 80%;
+.flex img{
+    width: 100%;
 }
-footer {
-	background-color: hsl(192, 100%, 9%);
-	color: #fff;
-	padding: 180px 0 60px;
+.get-started{
+    background-color: var(--pink);
+    color:var(--white);
+    padding: 10px 40px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 }
-footer ul {
-	list-style-type: none;
+.get-started:active{
+    background-color:hsla(322, 100%, 66%,.5);
 }
-footer ul li {
-	margin-bottom: 20px;
+footer{
+    color:var(--white);
+    background-color: var(--verydarkcyan);
+    margin-top: 100px;
 }
-footer .social-media {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+footer>div>div{
+    margin-top: 100px;
 }
-footer .circle {
-	border: 1px solid #fff;
-	border-radius: 50%;
-	color: #fff;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	margin-right: 10px;
-	height: 40px;
-	width: 40px;
-	text-decoration: none;
+.float{
+    background-color: var(--white);
+    color:hsl(0, 100%, 0%);
+    width: 50%;
+    margin: auto;
+    padding: 60px;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    bottom: -250px;
+    box-shadow: var(--shadow);
 }
-footer p {
-	text-align: right;
+.float button{
+    margin-top:20px;
+	padding: 10px 60px;
 }
-@media screen and (max-width: 768px) {
-	body {
-		text-align: center;
-	}
-	nav.flex {
-		flex-direction: row;
-	}
-	.header-img {
-		margin-top: 40px;
-		margin-left: 0;
-		width: 100%;
-	}
-	.flex {
-		flex-direction: column;
-	}
-	.box-reverse-mobile {
-		flex-direction: column-reverse;
-	}
-	footer ul {
-		padding: 0;
-		width: 100%;
-	}
-	footer p {
-		text-align: center;
-	}
+.footer-grid{
+    display: grid;
+    grid-template-columns: 50% 15% 15% 15%;
+    grid-template-rows: 100%;
+    margin-top: 20px;
+}
+.footer-grid-2{
+    display: grid;
+    grid-template-columns: 10% 80%;
+    grid-template-rows: 100%;
+    margin: 0 0 20px 0;
+}
+
+footer a{
+    color:var(--white);
+    text-decoration: none;
+    line-height: 50px;
+}
+footer a:active{
+    text-decoration: underline;
+}
+i{
+    border: 2px solid var(--white);
+    margin-right:10px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all .1s linear;
+}
+i:active{
+    border: 2px solid var(--pink);
+    color:var(--pink);
+    transform: translateY(3px);
+}
+#copyright{
+    display: flex;
+    justify-content: end;
+    font-size: 13px;
+}
+nav div img{
+    width: 100%
+}
+button{
+    transition: all .1s linear;
+}
+button:active{
+    transform: translateY(3px);
+}
+@media screen and (max-width:620px) {
+    header{
+        background-image: url(./images/bg-hero-mobile.svg);
+    }
+    .nav-button{
+        padding: 5px;
+        border-radius: 25px;
+        font-size: 14px;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .build{
+        width: 90%;
+        text-align: center;
+        padding: 0;
+    }
+    main .flex{
+        padding: 10px;
+    }
+    .flex-2{
+        width: 90%;
+        margin: auto;
+        padding: 0;
+        text-align: center;
+    }
+    .flex-1{
+        width: 90%;
+        margin: 30px auto;
+    }
+    header>div, main>div, footer>div{
+        width: 90%;
+        margin: 0 auto;
+        padding: 40px 0 0 0;
+    }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+    .float{
+        width: 90%;
+        padding: 5px;
+        text-align: center;
+        border-radius: 20px;
+        bottom: -100px;
+    }
+    footer>div>div{
+        padding-top: 20px
+    }
+    footer{
+        margin-top: 0;
+    }
+    .footer-grid{
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 20% 20% 10%;
+        margin-top: 20px;
+    }
+    .icons{
+        text-align: center;
+    }
 }
